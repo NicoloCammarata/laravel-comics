@@ -23,19 +23,32 @@
 
                 <div class="row">
 
-                    <div class="col">
+                    
 
-                        <div>
-                            <img class="gatto-img" src="{{ Vite::asset('resources/img/gatto.webp') }}" alt="Gatto">
-                        </div>
+                    @foreach ($comics as $comic)
+                    <div class="col-12 col-sm-3">
+                        <ul>
+                            <li>
+                                {{ $comic['title'] }}
 
-                        <div class="gatto-bg">
-                            QUESTO DIV AVRA' COME SFONDO IL GATTO
-                        </div>
+                            </li>
+                            <li>
+                                <img class="w-100" src="{{ $comic['thumb'] }}" alt="">
+                            </li>
+                            <li>
+                                {{ $comic['description'] }}
 
-                        @yield('main-content')
+                            </li>
+                            <li>
+                                {{ $comic['price'] }}
+
+                            </li>
+                        </ul>
 
                     </div>
+                    @endforeach
+
+                    
 
                 </div>
 

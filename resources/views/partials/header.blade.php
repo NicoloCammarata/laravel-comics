@@ -2,27 +2,50 @@
     $links = [
         [
             'url' => '/',
+            'label' => 'Caracters',
+            'active' => true,
+        ],
+        [
+            'url' => '/',
+            'label' => 'Comics',
+            'active' => true,
+        ],
+        [
+            'url' => '/contatti',
+            'label' => 'Movies',
+            'active' => true,
+        ],
+        [
+            'url' => '/',
             'label' => 'Home',
             'active' => true,
         ],
         [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
+            'url' => '/',
+            'label' => 'Tv',
             'active' => true,
         ],
         [
             'url' => '/contatti',
             'label' => 'Contatti',
-            'active' => false,
+            'active' => true,
         ],
-    ];
+        [
+            'url' => '/',
+            'label' => 'Home',
+            'active' => true,
+        ],
+        
+        
+         
+    ];   
 @endphp
 
 <header>
-    <nav>
-        <ul>
+    <nav class="container">
+        <ul class="row">
             @foreach ($links as $link)
-                <li>
+                <li class="col-1 my-1">
                     @if ($link['active'])
                         <a href="{{ $link['url'] }}">
                             {{ $link['label'] }}
