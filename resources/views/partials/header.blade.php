@@ -58,5 +58,6 @@
                 </li>
             @endforeach
         </ul>
+        
     </nav>
 </header>

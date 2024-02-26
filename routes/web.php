@@ -23,8 +23,17 @@ Route::get('/', function () {
     // return view('welcome', compact('firstName', 'lastName'));
 });
 
+
+
+
 Route::get('/chi-siamo', function () {
-    return view('subpages.about');
-});
+    $comics = config('comics');
+    $comicIndex = $_GET['id'];
+
+    $comic = $comics[$comicIndex];
+
+
+    return view('subpages.about', compact('comic'));
+})->name('comics.show');
 
 // Route::get(PERCORSO CON CUI ARRIVARE ALLA PAGINA, FUNZIONE DI CALLBACK CHE MI CREA LA RISPOSTA DA DARE ALL UTENTE)

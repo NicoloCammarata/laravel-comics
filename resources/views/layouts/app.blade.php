@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,40 +20,8 @@
         @include('partials.header')
 
         <main>
-            <div class="container">
-
-                <div class="row">
-
-                    
-
-                    @foreach ($comics as $comic)
-                    <div class="col-12 col-sm-3">
-                        <ul>
-                            <li>
-                                {{ $comic['title'] }}
-
-                            </li>
-                            <li>
-                                <img class="w-100" src="{{ $comic['thumb'] }}" alt="">
-                            </li>
-                            <li>
-                                {{ $comic['description'] }}
-
-                            </li>
-                            <li>
-                                {{ $comic['price'] }}
-
-                            </li>
-                        </ul>
-
-                    </div>
-                    @endforeach
-
-                    
-
-                </div>
-
-            </div>
+            
+            @yield('main-content')
         </main>
 
         @include('partials.footer')
